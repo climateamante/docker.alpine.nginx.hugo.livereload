@@ -1,7 +1,13 @@
-# Docker: Alpine | Hugo v0.32.3 #
+# docker.alpine.nginx.hugo.livereload #
+
+ > Docker: 17.12.0-ce, build c97c6d6
+ > Alpine: 3.6.0
+ > Hugo: 0.32.4
+ > Nginx: 1.13.8
+ > LiveReload: 0.4.0 | build from node: 8.5.0 
 
 
-## WORKING ##
+## debug | WIP ##
 
 
 hugo server \
