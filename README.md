@@ -11,16 +11,17 @@
  > LiveReload: 0.4.0 | build from node: 8.5.0 
 
 
-## debug | WIP ##
-
-### Setup: ###
+### setup: ###
  - folder structure for docker.alpine:
     - ``var/www/app/``
 
- - folder structure for the lite-server:
-    -  ``var/www/app/public/index.html``
+ - folder structure for hugo for nginx:
+    -  ``var/www/app/hugo/blog/public/index.html``
 
-# debug nginx #
+## nginx ##
+
+- config structure for docker.alpine.nginx:
+   - ``var/www/app/nginx/``
 
 ```
 docker run \
@@ -29,7 +30,7 @@ docker run \
 -it --rm researchranks/alpine.nginx:latest /bin/ash
 ```
 
-### Example: ###
+### example: ###
 
  - ``Docker run wants absolute paths``
  - ``docker-compose is just a stand-in for the docker-engine client``
@@ -44,7 +45,7 @@ docker run \
 -it --rm researchranks/alpine.hugo:latest /bin/ash
 ```
 
-### Starting Hugo Inside Of A Docker Container ###
+### starting hugo inside of a docker container ###
 
 ```
 hugo server \
@@ -55,6 +56,7 @@ hugo server \
 --port=1313 \
 --disableLiveReload=false
 ```
+
 ```
 docker run \
 -v $PWD/app:/var/www/app \
@@ -63,14 +65,21 @@ docker run \
 -it --rm researchranks/alpine.hugo /bin/ash
 ```
 
-## -- livereload working -- ##
+## livereload: ##
 
+ > start a hugo container
+
+```
 docker run \
 -v $PWD/app:/var/www/app:rw \
 -p 80:80 \
 --name alpine.hugo.dev \
 -it --rm researchranks/alpine.hugo /bin/ash
+```
 
+ > start hugo | livereload | cli
+
+```
 hugo server \
 --bind="0.0.0.0" \
 --buildDrafts \
@@ -85,8 +94,4 @@ hugo server \
 --source="blog" \
 --verbose
 --watch=true \
-
-## ---------------- ##
-
-
-
+```
