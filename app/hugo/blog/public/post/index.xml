@@ -2,67 +2,76 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on hugo site</title>
-    <link>http://localhost:1313/post/</link>
+    <link>http://localhost:80/post/</link>
     <description>Recent content in Posts on hugo site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Jan 2018 16:30:37 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jan 2018 22:52:55 +0000</lastBuildDate>
     
-	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://localhost:80/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Hello</title>
+      <link>http://localhost:80/post/hello/</link>
+      <pubDate>Sat, 13 Jan 2018 22:52:55 +0000</pubDate>
+      
+      <guid>http://localhost:80/post/hello/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Pink</title>
-      <link>http://localhost:1313/post/pink/</link>
+      <link>http://localhost:80/post/pink/</link>
       <pubDate>Fri, 12 Jan 2018 16:30:37 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/pink/</guid>
+      <guid>http://localhost:80/post/pink/</guid>
       <description> pink  </description>
     </item>
     
     <item>
       <title>Orange</title>
-      <link>http://localhost:1313/post/orange/</link>
+      <link>http://localhost:80/post/orange/</link>
       <pubDate>Fri, 12 Jan 2018 16:12:46 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/orange/</guid>
+      <guid>http://localhost:80/post/orange/</guid>
       <description> some data about orange  </description>
     </item>
     
     <item>
       <title>Blue</title>
-      <link>http://localhost:1313/post/blue/</link>
+      <link>http://localhost:80/post/blue/</link>
       <pubDate>Fri, 12 Jan 2018 03:38:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/blue/</guid>
+      <guid>http://localhost:80/post/blue/</guid>
       <description> some data
  </description>
     </item>
     
     <item>
       <title>Green</title>
-      <link>http://localhost:1313/post/green/</link>
+      <link>http://localhost:80/post/green/</link>
       <pubDate>Fri, 12 Jan 2018 03:38:06 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/green/</guid>
+      <guid>http://localhost:80/post/green/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Yellow</title>
-      <link>http://localhost:1313/post/-/</link>
+      <link>http://localhost:80/post/-/</link>
       <pubDate>Fri, 12 Jan 2018 03:38:02 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/-/</guid>
+      <guid>http://localhost:80/post/-/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Red</title>
-      <link>http://localhost:1313/post/red/</link>
+      <link>http://localhost:80/post/red/</link>
       <pubDate>Fri, 12 Jan 2018 03:35:45 +0000</pubDate>
       
-      <guid>http://localhost:1313/post/red/</guid>
+      <guid>http://localhost:80/post/red/</guid>
       <description></description>
     </item>
     

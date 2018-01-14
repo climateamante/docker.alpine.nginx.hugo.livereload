@@ -1,3 +1,3 @@
 +++
-title = "main | site"
+title = "the new hugo site"
 +++
