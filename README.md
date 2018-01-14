@@ -13,45 +13,6 @@
 
 ## debug | WIP ##
 
-
-hugo server \
---watch=true \
---cleanDestinationDir \
---renderToDisk \
---port=1313 \
---liveReloadPort=1313 \
---disableFastRender \
---bind="0.0.0.0" \
---buildDrafts \
---ignoreCache \
---navigateToChanged \
---noHTTPCache \
---verbose
-
-
-
-hugo server \
---source="blog" \
---watch=true \
---cleanDestinationDir \
---renderToDisk \
---port=80 \
---liveReloadPort=80 \
---disableFastRender \
---bind="0.0.0.0" \
---buildDrafts \
---ignoreCache \
---navigateToChanged \
---noHTTPCache \
---verbose
-
-
-
-
-
-
-
-
 ### Setup: ###
  - folder structure for docker.alpine:
     - ``var/www/app/``
@@ -59,18 +20,14 @@ hugo server \
  - folder structure for the lite-server:
     -  ``var/www/app/public/index.html``
 
-
 # debug nginx #
 
 ```
 docker run \
 -p 80:80 \
---name debug.dev \
--it --rm researchranks/debug:latest /bin/ash
+--name alpine.nginx.dev \
+-it --rm researchranks/alpine.nginx:latest /bin/ash
 ```
-
-
-
 
 ### Example: ###
 
@@ -85,14 +42,6 @@ docker run \
 -p 80:1313 \
 --name alpine.hugo.dev \
 -it --rm researchranks/alpine.hugo:latest /bin/ash
-```
-
-```bash
-docker run \
--v $PWD/app:/var/www/app \
--p 80:1313 \
---name alpine.hugo.dev \
--it --rm researchranks/alpine.hugo /bin/ash
 ```
 
 ### Starting Hugo Inside Of A Docker Container ###
@@ -124,14 +73,18 @@ docker run \
 
 hugo server \
 --bind="0.0.0.0" \
---port=80 \
 --buildDrafts \
---watch=true \
+--cleanDestinationDir \
 --disableFastRender \
 --ignoreCache \
 --liveReloadPort=80 \
 --navigateToChanged \
---noHTTPCache
+--noHTTPCache \
+--port=80 \
+--renderToDisk \
+--source="blog" \
+--verbose
+--watch=true \
 
 ## ---------------- ##
 

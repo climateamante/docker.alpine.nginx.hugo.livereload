@@ -60,9 +60,8 @@ RUN apk --update add --virtual build_deps build-base zlib-dev pcre-dev libressl-
 
 #VOLUME ["/var/cache/nginx"]
 
-ADD ./app/nginx/nginx.conf /etc/nginx/
-ADD	./app/nginx/conf.d/ /etc/nginx/conf.d/
-ADD ./app/html/ /usr/share/nginx/html/
+# ADD ./app/nginx/nginx.conf /etc/nginx/
+# ADD	./app/nginx/conf.d/ /etc/nginx/conf.d/
 
 WORKDIR /etc/nginx
 #VOLUME ["/var/cache/nginx"]
