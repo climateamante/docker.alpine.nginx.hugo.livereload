@@ -4,9 +4,9 @@
 
  > Alpine: 3.6.0
 
- > Hugo: 0.32.4
-
  > Nginx: 1.13.8
+
+ > Hugo: 0.32.4
 
  > LiveReload: 0.4.0 | build from node: 8.5.0 
 
@@ -92,6 +92,6 @@ hugo server \
 --port=80 \
 --renderToDisk \
 --source="blog" \
---verbose
---watch=true \
+--verbose \
+--watch=true
 ```

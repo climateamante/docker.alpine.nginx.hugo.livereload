@@ -33,9 +33,7 @@ RUN tar xzf /usr/local/${HUGO_BINARY}.tar.gz -C /usr/local/bin/ \
 ENV HUGO=/usr/local/bin/hugo
 RUN echo "Hugo path: ${HUGO}"
 
-#CMD hugo
-
-#  server --watch=true \
+#CMD hugo server --watch=true \
 # --cleanDestinationDir \
 # --renderToDisk \
 # --port=1313 \
@@ -58,3 +56,5 @@ RUN echo "Hugo path: ${HUGO}"
 #EXPOSE 8080
 
 #CMD ["npm", "start"]
+
+# CMD ["/usr/local/bin/hugo", "server", '--bind="0.0.0.0"', "--watch", "--cleanDestinationDir", "--renderToDisk", "--port=1313", "--liveReloadPort=1313", "--buildDrafts", "--ignoreCache", "--navigateToChanged", "--noHTTPCache", "--verbose"]

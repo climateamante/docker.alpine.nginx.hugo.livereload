@@ -33,14 +33,33 @@ services:
          context: ./
          dockerfile: ./dockerfiles/alpine.hugo.dockerfile.sh
       volumes:
+         - ./dockerfiles/alpine.waitforit.sh:/waitforit.sh
          - ./app/hugo/blog:/var/www/app/:rw
       restart: always
       expose:
+         - 80
+         - 35729 
          - 1313
-         - 35729
+      hostname: hugo
+      extra_hosts:
+       - "localhost:127.0.0.1"
       ports:
-         - 1313:1313
-      entrypoint: ["hugo", "server", "--watch", "--cleanDestinationDir", "--renderToDisk", "--port=80", "--liveReloadPort=80", "--buildDrafts", "--ignoreCache", "--navigateToChanged", "--noHTTPCache", "--verbose"]
+          - 1313:1313
+      #note: in production mode inlucde | --appendPort=false
+      entrypoint: "hugo server \
+       --baseURL='localhost' \
+       --bind='0.0.0.0' \
+       --watch \
+       --cleanDestinationDir \
+       --renderToDisk \
+       --buildDrafts \     
+       --disableFastRender \
+       --ignoreCache \
+       --port=1313 \
+       --liveReloadPort=1313 \
+       --navigateToChanged \
+       --noHTTPCache \
+       --verbose"
       image: researchranks/alpine.hugo:latest
 
    livereload:
@@ -58,3 +77,7 @@ services:
       volumes:
          - ./app/hugo/blog/:/usr/src/livereload-watch
       image: researchranks/alpine.livereload:latest
+
+networks:
+  local:
+    driver: bridge
