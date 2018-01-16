@@ -50,7 +50,8 @@ update | @ 01152018-041958PM
       <pubDate>Fri, 12 Jan 2018 16:30:37 +0000</pubDate>
       
       <guid>//localhost:1313/post/pink/</guid>
-      <description> pink  </description>
+      <description>  black
+  </description>
     </item>
     
     <item>
@@ -105,7 +106,8 @@ update | @ 01152018-041958PM
       <pubDate>Fri, 12 Jan 2018 03:35:45 +0000</pubDate>
       
       <guid>//localhost:1313/post/red/</guid>
-      <description></description>
+      <description>  red
+  </description>
     </item>
     
   </channel>
